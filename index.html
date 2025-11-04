@@ -11,42 +11,53 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
   
   <style>
-.body {
+body {
   margin: 0;
   padding: 0;
-  background: url('fondo-estrellado.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background: radial-gradient(#0b0b3a, #000000);
   font-family: "Sour Gummy", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      }
-
-.heart-container {
-  position: absolute;
-  top: -10%;
-  left: 0%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
+  overflow-x: hidden;
 }
+
+/* Corazón centrado */
+.heart-container {
+  position: relative;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* Dedicatoria debajo del corazón */
 .dedicatoria-container {
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 700px;
   text-align: center;
   padding: 20px;
-  z-index: 5;
+  margin: 0 auto;
+  max-width: 90%;
 }
 
 .dedicatoria {
-  font-size: 1.2em;
-  color: #f8f8f8;
+  font-size: 1.1em;
+  color: #fcfafa;
   line-height: 1.6;
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 15px;
   padding: 15px;
   box-shadow: 0 0 10px rgba(255, 95, 122, 0.3);
 }
+ /* Estilos responsivos para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+  .dedicatoria {
+    font-size: 1em;
+    padding: 10px;
+  }
 
+  .heart-container {
+    top: 20px;
+    margin-bottom: 20px;
+  }
+}
     :root {
       --bg: #0a0a0f;
       --fg: #ffffff;
