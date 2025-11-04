@@ -16,46 +16,54 @@ body {
   padding: 0;
   background: radial-gradient(#0b0b3a, #000000);
   font-family: "Sour Gummy", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
 /* Corazón centrado */
 .heart-container {
-  position: relative;
-  top: 50px;
+  margin-top: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
+}
+
+.heart-img {
+  width: 200px;
+  max-width: 80vw;
 }
 
 /* Dedicatoria debajo del corazón */
 .dedicatoria-container {
-  text-align: center;
+  margin-top: 30px;
   padding: 20px;
-  margin: 0 auto;
-  max-width: 50%;
+  max-width: 90%;
+  text-align: center;
 }
 
 .dedicatoria {
-  font-size: 0.5em;
-  color: #fcfafa;
+  font-size: 1.1em;
+  color: #fdfbfb;
   line-height: 1.6;
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 15px;
   padding: 15px;
   box-shadow: 0 0 10px rgba(255, 95, 122, 0.3);
 }
- /* Estilos responsivos para pantallas pequeñas */
+
+/* Ajustes para pantallas pequeñas */
 @media screen and (max-width: 600px) {
+  .heart-img {
+    width: 150px;
+  }
+
   .dedicatoria {
     font-size: 1em;
     padding: 10px;
-  }
-
-  .heart-container {
-    top: 20px;
-    margin-bottom: 20px;
   }
 }
     :root {
